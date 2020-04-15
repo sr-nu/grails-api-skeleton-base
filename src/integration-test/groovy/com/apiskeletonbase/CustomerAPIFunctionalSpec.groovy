@@ -3,8 +3,9 @@ package com.apiskeletonbase
 import grails.plugins.rest.client.RestBuilder
 import grails.plugins.rest.client.RestResponse
 import grails.testing.mixin.integration.Integration
-import grails.transaction.Rollback
 import spock.lang.Specification
+
+//IDE is not reliable, execute from command line ./gradlew integrationTest
 
 @Integration
 class CustomerAPIFunctionalSpec extends Specification  {

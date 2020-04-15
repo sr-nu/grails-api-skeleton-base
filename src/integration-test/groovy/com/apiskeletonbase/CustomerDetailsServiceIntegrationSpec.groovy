@@ -4,6 +4,8 @@ import grails.testing.mixin.integration.Integration
 import grails.transaction.*
 import spock.lang.*
 
+//IDE is not reliable, execute from command line ./gradlew integrationTest
+
 @Integration
 @Rollback
 class CustomerDetailsServiceIntegrationSpec extends Specification{
