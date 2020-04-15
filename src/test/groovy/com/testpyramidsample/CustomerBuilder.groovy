@@ -3,6 +3,7 @@ package com.testpyramidsample
 class CustomerBuilder {
     String name
     String location
+    CustomerDetails customerDetails
 
 
     def withName(String name){
@@ -15,10 +16,16 @@ class CustomerBuilder {
         return this
     }
 
+    def withCustomerDetails(String customerDetails){
+        this.customerDetails = customerDetails
+        return this
+    }
+
     def build() {
         return new Customer(
                 name: name,
-                location: location
+                location: location,
+                customerDetails: customerDetails
         )
     }
 

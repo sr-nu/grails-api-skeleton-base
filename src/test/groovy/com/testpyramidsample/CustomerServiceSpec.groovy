@@ -8,18 +8,19 @@ class CustomerServiceSpec extends Specification implements DataTest, ServiceUnit
 
     def setup() {
         mockDomain(Customer)
+        mockDomain(CustomerDetails)
         setupMocks()
     }
 
     def customer = new CustomerBuilder().withName("customer name").withLocation("location-1").build()
-    def setupMocks(def service = service) {
-        def customerService = Mock(CustomerService)
-        customerService.saveCustomerDetails(_, _,) >> customer
-        service.eventDetailService = eventDetailServiceMock
+    def customerDetails = new CustomerDetailsBuilder().build()
 
-        def eventAssetServiceMock = Mock(EventAssetService)
-        eventAssetServiceMock.createEventAsset(_, _, _, _) >> eventAsset
-        service.eventAssetService = eventAssetServiceMock
+
+    def setupMocks(def service = service) {
+        def customerDetailsService = Mock(CustomerDetailsService)
+        customerDetailsService.createCustomerDetail(_) >> customerDetails
+
+        service.customerDetailsService = customerDetailsService
     }
 
 
@@ -27,8 +28,11 @@ class CustomerServiceSpec extends Specification implements DataTest, ServiceUnit
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
+    void "test create customer"() {
+        when:
+            def customer = service.createCustomer("some name", "some location", "someaddress")
+        then:
+            customer.name.toLowerCase() == "some name"
+            customer.customerDetails.address1 == customerDetails.address1
     }
 }
