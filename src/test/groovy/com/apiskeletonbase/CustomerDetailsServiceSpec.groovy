@@ -1,4 +1,4 @@
-package com.testpyramidsample
+package com.apiskeletonbase
 
 import grails.testing.gorm.DataTest
 import grails.testing.services.ServiceUnitTest

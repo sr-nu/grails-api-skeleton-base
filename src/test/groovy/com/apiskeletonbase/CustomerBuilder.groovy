@@ -1,4 +1,4 @@
-package com.testpyramidsample
+package com.apiskeletonbase
 
 class CustomerBuilder {
     String name

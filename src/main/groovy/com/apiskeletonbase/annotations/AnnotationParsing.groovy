@@ -1,4 +1,4 @@
-package com.testpyramidsample.annotations
+package com.apiskeletonbase.annotations
 
 import grails.converters.JSON
 import grails.util.Holders

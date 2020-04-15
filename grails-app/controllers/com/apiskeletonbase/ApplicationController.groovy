@@ -1,4 +1,4 @@
-package com.testpyramidsample
+package com.apiskeletonbase
 
 import grails.core.GrailsApplication
 import grails.plugins.*

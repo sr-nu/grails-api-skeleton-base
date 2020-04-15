@@ -1,6 +1,6 @@
-package com.testpyramidsample
+package com.apiskeletonbase
 
-import com.testpyramidsample.annotations.AnnotationParsing
+import com.apiskeletonbase.annotations.AnnotationParsing
 
 class BootStrap {
 

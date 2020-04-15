@@ -1,4 +1,4 @@
-package com.testpyramidsample.annotations
+package com.apiskeletonbase.annotations
 
 
 

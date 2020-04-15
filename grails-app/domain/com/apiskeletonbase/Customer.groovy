@@ -1,6 +1,6 @@
-package com.testpyramidsample
+package com.apiskeletonbase
 
-import com.testpyramidsample.annotations.JsonMarshallerFormat
+import com.apiskeletonbase.annotations.JsonMarshallerFormat
 
 class Customer {
 

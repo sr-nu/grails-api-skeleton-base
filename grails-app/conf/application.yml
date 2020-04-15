@@ -2,7 +2,7 @@
 grails:
     profile: rest-api
     codegen:
-        defaultPackage: testpyramidsample
+        defaultPackage: apiskeletonbase
     gorm:
         reactor:
             # Whether to translate GORM events into Reactor events

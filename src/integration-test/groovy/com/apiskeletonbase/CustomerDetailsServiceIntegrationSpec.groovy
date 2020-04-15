@@ -1,4 +1,4 @@
-package com.testpyramidsample
+package com.apiskeletonbase
 
 import grails.testing.mixin.integration.Integration
 import grails.transaction.*
