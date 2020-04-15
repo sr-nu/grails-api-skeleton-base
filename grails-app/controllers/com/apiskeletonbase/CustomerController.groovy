@@ -22,4 +22,20 @@ class CustomerController {
         render(customer as JSON)
     }
 
+    def save() {
+        Map requestDetails = request.JSON as Map
+        String name = requestDetails?.name
+        String location = requestDetails?.location
+        String address = requestDetails?.address
+
+        def result = [:]
+        if (name && location && address) {
+            result = customerService.createCustomer(name, location, address)
+        } else {
+            return response.sendError(404, "Missing mandatory parameters")
+        }
+
+        render(result as JSON)
+    }
+
 }

@@ -17,6 +17,7 @@ class Customer {
     @JsonMarshallerFormat
     static marshallerFormat = { Customer customer ->
         return [
+                id    : customer?.id,
                 name    : customer?.name,
                 location: customer?.location,
                 address1: customer?.customerDetails?.address1,
